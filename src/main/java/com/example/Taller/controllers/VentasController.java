@@ -36,7 +36,7 @@ public class VentasController {
         try {
             Concesionario concesionario = concesionarioService.findById(id);
             if (concesionario != null) {
-                List<Concesionario> concesionarios = new ArrayList<>();
+                List<Concesionario> concesionarios = new ArrayList<>();Conces
                 concesionarios.add(concesionario);
                 Ventas result = ventasService.save(ventas, concesionarios);
                 return ResponseHandler.generateResponse("Success", HttpStatus.CREATED, result);
